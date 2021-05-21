@@ -1,0 +1,479 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F89A3C44-6403-444F-AA8E-FFC197F51776}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Time_Table_Mangement_Sytem</RootNamespace>
+    <AssemblyName>Time Table Mangement Sytem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Time Table Generator</ProductName>
+    <PublisherName>WD_R_29</PublisherName>
+    <SuiteName>WD_R_29</SuiteName>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>1F28E9606498715B06663FB235A9B6D0F9C881EF</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Time Table Mangement Sytem_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>C:\Users\Devni\Desktop\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddRoom.Designer.cs">
+      <DependentUpon>AddRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddSessions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSessions.Designer.cs">
+      <DependentUpon>AddSessions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Addstudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Addstudents.Designer.cs">
+      <DependentUpon>Addstudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsecutiveSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsecutiveSession.Designer.cs">
+      <DependentUpon>ConsecutiveSession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lecturer.Designer.cs">
+      <DependentUpon>Lecturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Location.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Location.Designer.cs">
+      <DependentUpon>Location.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocationNotAvail.cs" />
+    <Compile Include="ManageConsecutive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageConsecutive.Designer.cs">
+      <DependentUpon>ManageConsecutive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageNotOverlappingSessions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageNotOverlappingSessions.Designer.cs">
+      <DependentUpon>ManageNotOverlappingSessions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageParallel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageParallel.Designer.cs">
+      <DependentUpon>ManageParallel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="notavailable.cs" />
+    <Compile Include="NotAvailableTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotAvailableTime.Designer.cs">
+      <DependentUpon>NotAvailableTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotOverlappingSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotOverlappingSession.Designer.cs">
+      <DependentUpon>NotOverlappingSession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParallelSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParallelSession.Designer.cs">
+      <DependentUpon>ParallelSession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistics.Designer.cs">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subjects.Designer.cs">
+      <DependentUpon>Subjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tags.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tags.Designer.cs">
+      <DependentUpon>Tags.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Session ManagementDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Session ManagementDashboard.Designer.cs">
+      <DependentUpon>Session ManagementDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TimeTableDatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TimeTableDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TimeTableDatabaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TimeTableDatabaseDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TimeTableDatabaseDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TimeTableDatabaseDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TimeTableDatabaseDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TimeTableDatabaseDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TimeTableDatabaseDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TimeTableDatabaseDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TImeTableDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TImeTableDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TImeTableDBDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TImeTableDBDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TimeTable_Lec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeTable_Lec.Designer.cs">
+      <DependentUpon>TimeTable_Lec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimeTable_Location.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeTable_Location.Designer.cs">
+      <DependentUpon>TimeTable_Location.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimeTable_Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeTable_Student.Designer.cs">
+      <DependentUpon>TimeTable_Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingDays.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkingDays.Designer.cs">
+      <DependentUpon>WorkingDays.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkTimeHour.cs" />
+    <EmbeddedResource Include="AddRoom.resx">
+      <DependentUpon>AddRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSessions.resx">
+      <DependentUpon>AddSessions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Addstudents.resx">
+      <DependentUpon>Addstudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsecutiveSession.resx">
+      <DependentUpon>ConsecutiveSession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer.resx">
+      <DependentUpon>Lecturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Location.resx">
+      <DependentUpon>Location.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageConsecutive.resx">
+      <DependentUpon>ManageConsecutive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageNotOverlappingSessions.resx">
+      <DependentUpon>ManageNotOverlappingSessions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageParallel.resx">
+      <DependentUpon>ManageParallel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotAvailableTime.resx">
+      <DependentUpon>NotAvailableTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotOverlappingSession.resx">
+      <DependentUpon>NotOverlappingSession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParallelSession.resx">
+      <DependentUpon>ParallelSession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistics.resx">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subjects.resx">
+      <DependentUpon>Subjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tags.resx">
+      <DependentUpon>Tags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Session ManagementDashboard.resx">
+      <DependentUpon>Session ManagementDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TimeTable_Lec.resx">
+      <DependentUpon>TimeTable_Lec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeTable_Location.resx">
+      <DependentUpon>TimeTable_Location.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeTable_Student.resx">
+      <DependentUpon>TimeTable_Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkingDays.resx">
+      <DependentUpon>WorkingDays.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Time Table Mangement Sytem_TemporaryKey.pfx" />
+    <None Include="TimeTableDatabaseDataSet.xsc">
+      <DependentUpon>TimeTableDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TimeTableDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TimeTableDatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TimeTableDatabaseDataSet.xss">
+      <DependentUpon>TimeTableDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TimeTableDatabaseDataSet1.xsc">
+      <DependentUpon>TimeTableDatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TimeTableDatabaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TimeTableDatabaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TimeTableDatabaseDataSet1.xss">
+      <DependentUpon>TimeTableDatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TimeTableDatabaseDataSet2.xsc">
+      <DependentUpon>TimeTableDatabaseDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="TimeTableDatabaseDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TimeTableDatabaseDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TimeTableDatabaseDataSet2.xss">
+      <DependentUpon>TimeTableDatabaseDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="TimeTableDatabaseDataSet3.xsc">
+      <DependentUpon>TimeTableDatabaseDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="TimeTableDatabaseDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TimeTableDatabaseDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TimeTableDatabaseDataSet3.xss">
+      <DependentUpon>TimeTableDatabaseDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="TimeTableDatabaseDataSet4.xsc">
+      <DependentUpon>TimeTableDatabaseDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="TimeTableDatabaseDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TimeTableDatabaseDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TimeTableDatabaseDataSet4.xss">
+      <DependentUpon>TimeTableDatabaseDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="TImeTableDBDataSet.xsc">
+      <DependentUpon>TImeTableDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TImeTableDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TImeTableDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TImeTableDBDataSet.xss">
+      <DependentUpon>TImeTableDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TImeTableDBDataSet12.xsc">
+      <DependentUpon>TImeTableDBDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="TImeTableDBDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TImeTableDBDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TImeTableDBDataSet12.xss">
+      <DependentUpon>TImeTableDBDataSet12.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lec.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\students_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subjects_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tag_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Location_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Time_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Statistic_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\session_logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TimeTableDatabase.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TimeTableDatabase_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>TimeTableDatabase.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SqlLocalDB.15.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2019 Express LocalDB</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
